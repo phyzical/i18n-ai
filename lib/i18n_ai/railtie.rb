@@ -96,7 +96,7 @@ module I18nAi
       end
 
       def load_locales(locales_file)
-        YAML.load_file(locales_file)
+        YAML.load_file(locales_file, aliases: true)
       end
 
       def save_translated_locales(locale, translated_content)
