@@ -22,13 +22,6 @@ module I18nAi
           #{text}
           """
 
-          Example Return YAML:
-
-          ```
-          {{ISO_639 language code}}:
-            key_1: "value1"
-          ```
-
           Return only the valid translated YAML with proper formatting with no explanation.
         PROMPT
       end
@@ -65,7 +58,7 @@ module I18nAi
       end
 
       def extract_translated_content(chat_content)
-        match_data = chat_content.match(/```(.*?)```/m)
+        match_data = chat_content.match(/---\n(.*?)/m)
         pp match_data
         pp chat_content
         match_data ? match_data[1].strip : nil
