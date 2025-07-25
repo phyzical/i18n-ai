@@ -31,9 +31,6 @@ Gem::Specification.new do |spec|
   spec.executables = spec.files.grep(%r{\Aexe/}) { |f| File.basename(f) }
   spec.require_paths = ["lib"]
 
-  # Uncomment to register a new dependency of your gem
-  spec.add_runtime_dependency("railties", ">= 6.0.0", "< 8")
-
   spec.add_dependency "anthropic"
   spec.add_dependency "ruby-openai"
 
