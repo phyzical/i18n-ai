@@ -22,6 +22,13 @@ module I18nAi
           #{text}
           """
 
+          Example Return YAML:
+
+          ```
+          {{ISO_639 language code}}:
+            key_1: "value1"
+          ```
+
           Return only the valid translated YAML with proper formatting with no explanation.
         PROMPT
       end
