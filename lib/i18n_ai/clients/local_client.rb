@@ -59,11 +59,12 @@ module I18nAi
 
       def extract_translated_content(chat_content)
         match_data = chat_content.match(/```(.*?)```/m)
+        pp match_data
+        pp chat_content
         match_data ? match_data[1].strip : nil
       end
 
       def parse_response(response)
-        pp response
         json = JSON.parse(response)
         json.dig("response")
       rescue TypeError, NoMethodError => e
